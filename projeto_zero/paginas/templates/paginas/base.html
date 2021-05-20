@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--TITULO DA PAGINA-->
+    {% block titulo %}
+    <title>Projeto Zero</title>
+    {% endblock %}
+
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static '/css/bootstrap-5/bootstrap.min.css' %}">
+</head>
+<body>
+    {% block menu %}
+    <nav class="bg-light">
+        Menu Principal
+    </nav>
+    {% endblock %}
+
+    <div class="container">
+    {% block conteudo %}
+        Conteudo do Site
+    {% endblock %}
+    </div>
+
+    {% block rodape %}
+    <footer class="bg-light">
+        Rodape
+    </footer>
+    {% endblock %}
+    <!--JAVASCRIPT-->
+    <script src="{% static '/js/bootstrap-5/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap-5/popper.min.js' %}"></script>
+</body>
+</html>
